@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-  },
+  "bin": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/istex/es-helpers.git"
@@ -33,6 +32,8 @@
     "eslint-plugin-promise": "^6.0.0"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^8.6.0",
+    "colors": "^1.4.0",
     "lodash": "^4.17.21"
   }
 }
