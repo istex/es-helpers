@@ -21,7 +21,7 @@ function putCreationAndModificationDatePipeline () {
     .putPipeline({
       id: PIPELINE_ID,
       body: {
-        description: 'This pipeline set the creation date and/or the modification.',
+        description: 'This pipeline set the technicale.creationDate and set or update the technical.modificationDate.',
         processors: [
           {
             script: {

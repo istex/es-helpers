@@ -5,7 +5,7 @@ module.exports = function deleteIndexIx (indiceName) {
   return esClient
     .indices
     .exists({ index: indiceName })
-    .then(doesExist => {
+    .then(({ body: doesExist }) => {
       if (!doesExist) return;
       return esClient
         .indices
