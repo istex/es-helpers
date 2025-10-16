@@ -5,7 +5,7 @@ module.exports = function createIndexNx (indiceName, indiceConfig = {}) {
   return esClient
     .indices
     .exists({ index: indiceName })
-    .then(({ body: doesExist }) => {
+    .then((doesExist) => {
       if (doesExist) return;
       return esClient
         .indices

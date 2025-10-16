@@ -6,7 +6,7 @@ module.exports = (function () {
 
   function createInstance (config, { logger }) {
     const client = new Client(config);
-    client.on('response', (err, result) => {
+    client.diagnostic.on('response', (err, result) => {
       if (err) {
         const failuresReasons = err?.meta?.body?.failures?.map((failure) => failure?.cause?.reason) || [];
         const failuresTypes = err?.meta?.body?.failures?.map((failure) => failure?.cause?.type) || [];
